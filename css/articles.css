@@ -1,0 +1,12 @@
+.courses {
+  margin-top: auto;
+}
+
+.courses h1 {
+  font-family: "Playwrite US Trad";
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px #f3d0d7;
+  text-align: center;
+}

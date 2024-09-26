@@ -1,0 +1,363 @@
+/* ======================== BANNER - CAROUSEL ============================= */
+.banner-carousel {
+  width: 100%;
+  height: calc(100vh - 140px);
+  position: relative;
+  z-index: 1;
+}
+
+.banner-slide {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  align-items: center;
+  z-index: 0;
+}
+
+.banner-slide img {
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+}
+
+.banner-slide h1 {
+  margin-left: 80px;
+  font-size: 60px;
+  /* color: red; */
+  text-shadow: 2px 4px 4px rgb(219, 191, 191);
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*=================Test=============*/
+
+.about_tests {
+  background-color: #ffffff;
+  box-shadow: inset 0 0 5rem #f3d0d7;
+  margin-top: 3rem;
+}
+.about_tests-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 5rem;
+}
+
+.about_tests-left h1 {
+  font-family: "Playwrite NZ";
+  color: black;
+  text-shadow: 2px 2px 4px #f3d0d7;
+}
+.about_tests-left {
+  margin: 1.6rem 0 2.5rem;
+}
+
+.about_tests-left p {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 500;
+}
+
+.tests_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.test_card {
+  background: white;
+  padding: 1.6rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.test_card:hover {
+  background: var(--color-secondary);
+  box-shadow: 0 3rem 3rem #e2e2e2;
+}
+
+.test_card h3 {
+  margin-bottom: 2rem;
+}
+
+.test_icon {
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.test_card p {
+  margin-top: 1rem;
+}
+
+/*=================Achievement=============*/
+
+.about_achivements {
+  background-color: var(--color-secondary);
+  box-shadow: inset 0 0 10rem rgb(255, 255, 255);
+  /* margin-top: 3rem; */
+}
+.about_achievements-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 5rem;
+}
+
+.about_achievements-right h1 {
+  font-family: "Playwrite NZ";
+  text-shadow: 2px 2px 4px white;
+}
+.about_achievements-right {
+  margin: 1.6rem 0 2.5rem;
+}
+.about_achievements-right p {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  font-weight: 500;
+}
+.achievements_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.achievement_card {
+  background: var(--color-button);
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.achievement_card:hover {
+  /* background: var(--color-bg2); */
+  border: 1px solid black;
+  box-shadow: 0 3rem 3rem rgba(255, 255, 255, 0.445);
+}
+.achievement_icon {
+  background: white;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  animation: tilt-shake 0.4s infinite;
+}
+
+/* Definisi animasi tilt-shake */
+@keyframes tilt-shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+
+.achievement_card p {
+  margin-top: 1rem;
+}
+
+/*=================TEAMS=============*/
+.team {
+  background: white;
+  box-shadow: inset 0 0 3rem var(--color-secondary);
+}
+
+.team h2 {
+  font-family: "Playwrite NZ";
+  text-shadow: 2px 2px 4px var(--color-secondary);
+}
+
+.team__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team__member-info p {
+  color: black;
+}
+
+.team__member {
+  background-color: var(--color-button);
+  padding: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.team__member:hover {
+  background: transparent;
+  border-color: black;
+}
+
+.team__member-image img {
+  filter: saturate(0);
+}
+
+.team__member-image:hover img {
+  filter: saturate(1);
+}
+
+.team__member-info * {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.team__member-socials {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-button);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+
+.team__member-socials a i.uil-instagram {
+  color: #c13584; /* Warna Instagram */
+}
+
+.team__member-socials a i.uil-twitter {
+  color: #1da1f2; /* Warna Twitter */
+}
+
+.team__member-socials a i.uil-linkedin {
+  color: #0077b5; /* Warna LinkedIn */
+}
+
+.team__member:hover .team__member-socials {
+  right: 0;
+}
+
+.team__member-socials a {
+  padding: 1rem;
+}
+
+/* ========== MEDIA QUERIES (TABLETS) ========== */
+@media screen and (max-width: 1024px) {
+  /* TEST */
+  .about_tests {
+    margin-top: 2rem;
+  }
+
+  .about_tests-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about_tests-right {
+    order: 1;
+    width: 30%;
+    margin: 0 auto;
+  }
+
+  .tests_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .test_card {
+    flex: 1 1 calc(33.33% - 2rem);
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .test_card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about_tests-left {
+    order: 2;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .test_card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .test_card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ACHIEVEMENTS */
+
+  .about_achievements-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about_achievements-left {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .team__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team__member {
+    padding: 1rem;
+  }
+}
+
+/* ========== MEDIA QUERIES (MOBILES) ========== */
+
+@media screen and (max-width: 600px) {
+  .achievements_cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .team__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .team__member {
+    padding: 0;
+  }
+
+  .team__member p {
+    margin-bottom: 1.5rem;
+  }
+
+  .banner-slide h1 {
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
